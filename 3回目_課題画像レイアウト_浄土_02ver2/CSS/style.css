@@ -1,0 +1,49 @@
+@charset "utf-8";
+body {
+    background-color:#eeeeee ;
+}
+
+h1 {
+    color: cadetblue;
+    text-align: center;
+    padding: 50px;
+}
+
+
+.contents {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    margin:0 auto; /*要素を中央揃え*/
+}
+
+.service {
+    width: 32%; /*親要素の幅の30%にする*/
+    background-color: #fff;
+}
+     
+.title {
+    color: cadetblue;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding: 5px 10px 5px;
+    border-left:10px solid cadetblue;
+    margin-left: 10px;
+}
+
+img {
+    padding-bottom: 15px;
+}
+p {
+    padding:10px ;
+}
+
+@media screen and (max-width: 400px) {
+    .contents {
+        flex-direction: column;
+        gap: 60px;
+}
+.service {
+    width: 100%;
+}
+}
