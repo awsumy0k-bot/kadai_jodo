@@ -3,32 +3,46 @@
 .header {
     max-width: 960px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;   
+    justify-content: space-between;
+    align-items: center; 
+    margin: 0 auto;
 }
-.left {
-    margin-right:auto;
-    font-size: 30px;
+.nav_list {
+    display: flex;
 }
+
 .right {
-    font-size: 10px;  
+    font-size: 16px;
+    padding-right: 10px;
+    padding: 5px 30px 5px;
 }    
 .right + li {
     border-left: 1px solid #000;
     padding-left: 10px;
-    padding-right: 10px;
+    
 }
 
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+
         
     }
+    .nav_list {
+        flex-direction: column;
+    }
+
     .right {
-        margin-right: auto;
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid #000; 
+}
     }
     .right + li {
     border-left: none;
-    border-bottom: 1px solid #000   
 }
+nav{
+    width: 100px
 }
