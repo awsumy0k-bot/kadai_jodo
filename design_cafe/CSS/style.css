@@ -1,4 +1,7 @@
 @charset "utf-8";
+body {
+    background-color: #e8d9bf;
+}
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -30,9 +33,6 @@
 
 }
 
-.hero_area {
-    background-color: #e8d9bf;
-}
 .hero_first {
     font-size: 30px;
     text-align: center;
@@ -40,7 +40,7 @@
 }
 
 .hero_second {
-     font-size: 82px;
+    font-size: 82px;
     line-height: 1.17;
     letter-spacing: 0.1em;
     text-align: center;
@@ -64,6 +64,8 @@
     }
         .hero_first {
         font-size: 17px;
+        padding-top: 40px;
+        padding-bottom: 28px
     }
        .hero_second {
         font-size: 38px;
@@ -71,9 +73,11 @@
         letter-spacing: 0.02em;
         text-align: center;
     } 
+        .hero_third {
+        padding-bottom: 56px; 
+    }
 }
-
-.hamberger,
+.hamburger,
 .header__nav-sp {
     display: none;
 }
@@ -154,22 +158,27 @@
     gap: 10px;
 }
 }
+/* aboutセクション */
 
 .about-item {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 
-.about-100 {
-    width: 500px;
-    height: 560px;
-}
-
-
-.about-list {
+.about_text-area {
+    width: 50%;
     padding-left: 76px;
 }
 
+#about-us .heading-h2 {
+  text-align: left;  
+}
+
+.heading-h2 {
+    text-align: center;
+}
 .heading-h2 img{
     height: 78px;
     width: auto;
@@ -184,11 +193,19 @@
     font-size: 16px;
     line-height: 1.62;
 }
+
+.about-us-list { 
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 @media screen and (max-width: 768px) {
-    .about_item {
+    .about-us-list {
         display: flex;
         flex-direction: column;
-        width: 100px;
+        width: 100%;
     } 
 
 }@media screen and (max-width: 1100px) {
@@ -201,24 +218,27 @@
     }
     } 
 
+/* menuセクション */
+
+#menu{
+    margin-bottom: 87px;
+}
+
 .menu-logo {
     margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.menu-list {
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .menu-item {
-    padding-top: 40px;
-    margin-bottom: 91px;
-    display: flex;
-    justify-content: center;
-    
-}
+    width: 30%;
 
-.menu-item img {
-    width: 300px;
-    height: 200px;
-    padding-right:47px;
 }
 
 .menu-title {
@@ -234,39 +254,39 @@
 }
 
 @media screen and (max-width: 768px) {
-    .menu_item {
+    .menu-list {
         display: flex;
         flex-direction: column;
-        width: 100px;
+        width: 100%;
+        justify-content: center;
     } 
 
+    
+}
+/* eventセクション */
+
+#event {
+    margin-bottom: 68px;
 }
 
-
 .event_logo {
-    padding-top: 62px;
-    display: flex;
-    justify-content: center;
+    padding-top: 62px; 
 }
 
 .event_list {
-    margin-top: 35px;
-    margin-left: 460px;
-    margin-bottom: 75px;
-    margin-right: 460px;
-    border: 3px solid #000 ;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 3px solid #4f260b ;
     background-color: #fff;
-    padding: 35px 161px 42px 157px;
-    
-    
+    padding: 35px 0px 16px 0px;
 }
+
 .event_item {
     display: flex;
     font-size: 23px;
-    margin-bottom: 26px;
-
+    max-width: 680px;
+    margin: 0 auto 26px;
 }
-
 
 .event_date {
     display: flex;
@@ -277,24 +297,26 @@
     border-bottom: 1px solid #4f260b;
     justify-content: flex-start;
 }
+
 @media screen and (max-width: 768px) {
     .event_item {
         flex-direction: column;
-        width: 100px;
     } 
 }
+
+/* accessセクション */
 
 #access.heading-h2 {
     margin-bottom: 46px;
 }
-
-
 
 .map iframe {
    filter: grayscale(100%) invert(92%) contrast(83%); 
     width: 100%;
     height: 400px;
 }
+
+/* slick */
 
 .slick-dots {
     bottom: 16px;
@@ -308,12 +330,21 @@
     color: #fff;
 }
 
-.footer_list {
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+/* footerセクション */
+footer{
     background-color: #fff;
+}
+
+.footer_list {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     padding-top: 72px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .footer_item {
@@ -333,7 +364,7 @@
     .footer_list {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        
         
     } 
 }
@@ -347,3 +378,4 @@
     right: 20px;
     width: 125px;
 }
+
